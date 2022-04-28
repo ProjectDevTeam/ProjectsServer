@@ -1,0 +1,23 @@
+{
+  "name": "projectsserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myselfwly/ProjectsServer.git"
+  },
+  "author": "CodeWly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myselfwly/ProjectsServer/issues"
+  },
+  "homepage": "https://github.com/myselfwly/ProjectsServer#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.0"
+  }
+}
