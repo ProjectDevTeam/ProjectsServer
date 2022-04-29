@@ -2,10 +2,19 @@ const express = require("express");
 const cors = require("cors");
 const router = require("./routes");
 const app = express()
-app.use(cors(), router);
-app.all("*", (req, res, next) => {
+const bodyparser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const errorHandler = require("./utils/errorHandler");
+const AppError = require("./utils/appError");
 
+app.use(cors(), router);
+app.use(cookieParser())
+app.use(bodyparser.urlencoded({ extende: true }));
+app.use(bodyparser.json())
+app.all("*", (req, res, next) => {
+    next(new AppError(`The URL ${req.originalUrl} does not exists`, 404));
 });
+app.use(errorHandler)
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
