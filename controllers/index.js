@@ -1,3 +1,5 @@
 const test = require('./test.js')
-const controllers = { ...test }
+const config = require('./config')
+const login = require('./login')
+const controllers = { ...test, ...config, ...login }
 module.exports = controllers

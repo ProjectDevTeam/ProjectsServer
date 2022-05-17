@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon --config nodemon.json",
-    "server": "node app.js"
+    "server": "node app.js",
+    "initServer": "node install"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "express": "^4.18.0"
+    "express": "^4.18.0",
+    "mysql": "^2.18.1"
   }
 }
