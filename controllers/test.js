@@ -1,8 +1,14 @@
-const test1 = (req, res, next) => {
-	res.status(200).json({
-		code: '0',
-		messages: ['success']
-	});
+const { requestType } = require('../utils/request.config');
+
+const test = {
+	test1: {
+		fun: (req, res, next) => {
+			res.status(200).json({
+				code: '0',
+				messages: ['success']
+			});
+		},
+		type: requestType[1]
+	}
 };
-const test = { get: { test1 } };
 module.exports = test;

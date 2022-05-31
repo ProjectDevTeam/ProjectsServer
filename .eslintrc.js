@@ -3,17 +3,17 @@ module.exports = {
 	env: {
 		browser: true,
 		es6: true,
-		amd: true,
+		amd: true
 	},
 	globals: {
 		$: 'readonly',
 		_: 'readonly',
-		process: 'readonly',
+		process: 'readonly'
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 2018,
-		sourceType: 'module',
+		sourceType: 'module'
 	},
 	plugins: ['@typescript-eslint'],
 	rules: {
@@ -32,7 +32,7 @@ module.exports = {
 		'no-multi-spaces': ['off'],
 		'import/extensions': ['off'],
 		'import/no-amd': ['off'],
-		'max-len': ['error', { code: 120 }],
+		'max-len': ['error', { code: 200 }],
 		semi: 'off',
 		'@typescript-eslint/semi': ['error'],
 		'operator-linebreak': ['error', 'after'],
@@ -40,6 +40,6 @@ module.exports = {
 		'no-unused-vars': ['off'],
 		'linebreak-style': ['off'],
 		'max-classes-per-file': ['off'],
-		'object-curly-newline': ['error', { consistent: true }],
-	},
-}
+		'object-curly-newline': ['error', { consistent: true }]
+	}
+};
