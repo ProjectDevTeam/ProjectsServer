@@ -1,0 +1,13 @@
+:root{
+            --notifacation-background-color:var(--color-1);
+            --notifacation-message-color:var(--color-2);
+            --notifacation-close-color:var(--color-2);
+            --notifacation-error-message-color:var(--color-3);
+            --notifacation-error-icon-color:var(--color-3);
+            --notifacation-success-message-color:var(--color-4);
+            --notifacation-success-icon-color:var(--color-4);
+            --notifacation-warning-message-color:var(--color-5);
+            --notifacation-warning-icon-color:var(--color-5);
+            --notifacation-info-message-color:var(--color-6);
+            --notifacation-info-icon-color:var(--color-6);
+}
