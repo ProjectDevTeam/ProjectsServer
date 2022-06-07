@@ -5,4 +5,14 @@
         --color-4:#52c41a;
         --color-5:#faad14;
         --color-6:#1890ff;
+        --color-7:rgba(10, 10, 10, 1);
+        --image-1:-webkit-linear-gradient(
+	right,
+	rgb(0, 255, 51),
+	#034f56,
+	rgb(248, 248, 245)
+);
+        --color-10:rgb(115, 124, 117);
+        --color-8:#888888;
+        --color-9:#04b373;
 }

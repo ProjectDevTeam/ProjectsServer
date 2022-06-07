@@ -1,12 +1,12 @@
 const conn = require('../services/db');
 const { requestType } = require('../utils/request.config');
-
+const { pjServerSQL } = require('../services/SQL/index');
 const pjServer = {
 	getUserInfo: {
 		fun: (req, res, next) => {
 			const { cookies } = req;
 			const cookie = cookies['X-Request-Auth'];
-			const sql = `SELECT id,userName,theme, routes FROM userInfo WHERE cookie='${cookie}'`;
+			const sql = pjServerSQL.getUserInfo(cookie);
 			conn.query(sql, (err, data, flieds) => {
 				if (err)
 					res.status(200).json({
@@ -45,7 +45,7 @@ const pjServer = {
 		fun: (req, res, next) => {
 			const { cookies } = req;
 			const cookie = cookies['X-Request-Auth'];
-			const sql = `SELECT theme FROM userInfo WHERE cookie='${cookie}'`;
+			const sql = pjServerSQL.getTheme(cookie);
 			conn.query(sql, (err, data, flieds) => {
 				if (err)
 					res.status(200).json({

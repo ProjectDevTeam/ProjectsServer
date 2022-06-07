@@ -10,4 +10,10 @@
             --notifacation-warning-icon-color:var(--color-5);
             --notifacation-info-message-color:var(--color-6);
             --notifacation-info-icon-color:var(--color-6);
+            --app-head-background-color:var(--color-7);
+            --app-head-logo-text-background-image:var(--image-1);
+            --app-head-nav-color:var(--color-8);
+            --app-head-nav-active-color:var(--color-9);
+            --app-head-nav-border-color:var(--color-10);
+            --app-head-nav2-background-color:var(--color-1);
 }

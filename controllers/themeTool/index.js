@@ -4,13 +4,14 @@ const conn = require('../../services/db');
 const AppError = require('../../utils/appError');
 const writeFile = require('../../utils/writFile');
 const { createThemeToolStr, createThemeToolValueStr } = require('./createStr');
+const { themeToolSQL } = require('../../services/SQL');
 const themeTool = {
 	getThemeValue: {
 		fun: (req, res, next) => {
 			const { query } = req;
 			const { platform, theme } = query;
 			const themeToolTb = `${platform}-${theme}`;
-			const SQL = `select * from \`${themeToolTb}\``;
+			const SQL = themeToolSQL.getThemeValue(themeToolTb);
 			conn.query(SQL, (err, data, flieds) => {
 				if (err) return next(new AppError(err));
 				return res.status(200).json({
@@ -27,7 +28,7 @@ const themeTool = {
 			const { query } = req;
 			// conn.query();
 			const { platform } = query;
-			const SQL = `select * from \`${platform}-value-list\``;
+			const SQL = themeToolSQL.getValueList(platform);
 			conn.query(SQL, (err, data, flieds) => {
 				if (err) return next(new AppError(err));
 				return res.status(200).json({
@@ -60,7 +61,7 @@ const themeTool = {
 							next(new AppError(err));
 						}
 					);
-					conn.query(`select * from \`${platform}-value-list\``, (err, dataValue, flieds) => {
+					conn.query(themeToolSQL.getValueList(platform), (err, dataValue, flieds) => {
 						if (err) return next(new AppError(err));
 						const ThemeToolValueStr = createThemeToolValueStr(dataValue, platform);
 						writeFile(
@@ -76,22 +77,6 @@ const themeTool = {
 						);
 					});
 				});
-
-				// writeFile(
-				// 	path.resolve(__dirname, `../../web-app/files/${(platform, data)}`),
-				// 	function () {
-				// 		res.status(200).json({
-				// 			code: '0',
-				// 			messages: ['success']
-				// 		});
-				// 	},
-				// 	function (err) {
-				// 		res.status(200).json({
-				// 			code: '300',
-				// 			messages: [err]
-				// 		});
-				// 	}
-				// );
 			});
 		},
 		type: requestType[2]
