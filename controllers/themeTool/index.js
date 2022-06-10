@@ -26,7 +26,6 @@ const themeTool = {
 	getValueList: {
 		fun: (req, res, next) => {
 			const { query } = req;
-			// conn.query();
 			const { platform } = query;
 			const SQL = themeToolSQL.getValueList(platform);
 			conn.query(SQL, (err, data, flieds) => {
@@ -80,6 +79,20 @@ const themeTool = {
 			});
 		},
 		type: requestType[2]
+	},
+	getAppThemeInfo: {
+		fun(req, res, next) {
+			const { query } = req;
+			const SQL = themeToolSQL.getAppThemeInfo(query);
+			conn.query(SQL, (err, data, flieds) => {
+				if (err) return next(new AppError(err));
+				return res.status(200).json({
+					code: '0',
+					data: data
+				});
+			});
+		},
+		type: requestType[1]
 	}
 };
 module.exports = themeTool;
