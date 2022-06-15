@@ -8,12 +8,24 @@ const login = {
 	authLogin: {
 		fun: (req, res, next) => {
 			const { userName, password } = req.body;
+
+			if (!userName) {
+				return res.status(200).json({
+					...resCode.login.noUserName
+				});
+			}
+			if (!password) {
+				return res.status(200).json({
+					...resCode.login.noPassword
+				});
+			}
 			const sql = loginSQL.authloginUserName(userName);
 			conn.query(sql, (err, data) => {
 				if (err)
 					res.status(200).json({
 						code: 300,
-						messages: [err]
+						messages: [err],
+						messagesType: 'error'
 					});
 				if (data[0]?.password == password) {
 					const { cookie, endTime } = createCookie(long);
