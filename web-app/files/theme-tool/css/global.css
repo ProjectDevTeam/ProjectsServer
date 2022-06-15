@@ -55,4 +55,16 @@
             --input-focus-box-shadow:var(--color-20);
             --input-hover-background-color:var(--color-18);
             --app-body-title-color:var(--color-9);
+            --form-color:var(--color-12);
+            --tabs-color:var(--color-12);
+            --tabs-tab-active-color:var(--color-9);
+            --tabs-link-bar-background:var(--color-9);
+            --tabs-content-color:var(--color-12);
+            --tabs-top-border-color:var(--color-21);
+            --tabs-tab-hover-color:var(--color-9);
+            --tabs-tab-focus-color:var(--color-9);
+            --scrollbar-thumb-background:var(--color-20);
+            --scrollbar-track-background:var(--color-17);
+            --app-searchTable-splitLine-color:var(--color-12);
+            --table-tbody-placeholder-hover-background-color:var(--color-16);
 }

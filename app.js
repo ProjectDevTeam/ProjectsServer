@@ -12,12 +12,16 @@ const errorHandler = require('./utils/errorHandler');
 const AppError = require('./utils/appError');
 const conn = require('./services/db');
 const { long } = require('./utils/serverConfig');
+const fs = require('fs');
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(cookieParser());
 app.use(cors(), [routePjServer, routerConfig, routerLogin]);
-app.use(express.static(path.resolve(__dirname, './web-app/files/')));
-app.all(/\/pjServer/, (req, res, next) => {
+app.use('/', express.static(path.resolve(__dirname, './web-app/files/')));
+app.use(express.static(path.resolve(__dirname, './web-app/app/tts/')));
+app.use(express.static(path.resolve(__dirname, './web-app/app/auth')));
+
+app.all(/\/pjServer|\/ThemeTool/, (req, res, next) => {
 	const { cookies } = req;
 	if (cookies['X-Request-Auth'] === undefined) {
 		res.status(401).json();
@@ -52,7 +56,32 @@ app.use('/themeTool', routerthemeTool);
 app.use('/config', routerConfig);
 app.use('/auth', routerLogin);
 app.use('/pjServer', routePjServer);
-
+app.get(/^\/tts\/*/, (req, res) => {
+	fs.readFile(__dirname + '/web-app/app/tts/build/index.html', (err, data) => {
+		if (err) {
+			console.log(err);
+			res.send('后台错误');
+		} else {
+			res.writeHead(200, {
+				'Content-Type': 'text/html; charset=utf-8'
+			});
+			res.end(data);
+		}
+	});
+});
+app.get(/^\/login/, (req, res) => {
+	fs.readFile(__dirname + '/web-app/app/auth/build/index.html', (err, data) => {
+		if (err) {
+			console.log(err);
+			res.send('后台错误');
+		} else {
+			res.writeHead(200, {
+				'Content-Type': 'text/html; charset=utf-8'
+			});
+			res.end(data);
+		}
+	});
+});
 app.all('*', (req, res, next) => {
 	next(new AppError(`The URL ${req.originalUrl} does not exists`, 404));
 });

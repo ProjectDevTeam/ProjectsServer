@@ -1,0 +1,101 @@
+.head-logo {
+  margin-left: 6px;
+  height: 100%;
+}
+.head-logo img {
+  height: 100%;
+  vertical-align: middle;
+}
+.head-logo .logo-text {
+  display: inline-block;
+  font-weight: bolder;
+  background-image: var(--app-head-logo-text-background-image);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.nav-item {
+  height: calc(var(--app-head-height) - 10px);
+  line-height: calc(var(--app-head-height) - 10px);
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: auto;
+  text-align: center;
+  padding: 0 10px;
+  z-index: 9999;
+}
+.nav-item .active {
+  color: var(--app-head-nav-active-color);
+}
+.nav-item a {
+  color: var(--app-head-nav-color);
+  text-decoration: none;
+}
+.nav-item .nav-item-nav {
+  height: 100%;
+  display: block;
+}
+.nav-item.nav-level2 {
+  background-color: var(--app-head-nav2-background-color);
+  position: absolute;
+  height: auto;
+  left: 0;
+}
+.nav-item.nav-level1:not(:first-child) {
+  border-left: 1px solid var(--app-head-nav-border-color);
+}
+
+.head-nav-nomal {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.user-info {
+  width: 60px;
+  margin: auto;
+}
+
+:root {
+  --app-head-height: 7vh;
+}
+.layout-head {
+  width: 100vw;
+  height: var(--app-head-height);
+  background-color: var(--app-head-background-color);
+}
+.layout-head .head-normal {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout-head .head-normal .white-space {
+  flex: 1;
+}
+
+.layout {
+  height: 100vh;
+  width: 100vw;
+}
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+}
+body#theme-tool {
+  background-color: var(--app-background-color);
+  color: var(--app-color);
+}
+
