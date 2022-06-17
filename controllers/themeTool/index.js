@@ -6,6 +6,7 @@ const writeFile = require('../../utils/writFile');
 const { createThemeToolStr, createThemeToolValueStr } = require('./createStr');
 const { themeToolSQL } = require('../../services/SQL');
 const themeTool = {
+	//获取主题所有配置
 	getThemeValue: {
 		fun: (req, res, next) => {
 			const { query } = req;
@@ -23,6 +24,7 @@ const themeTool = {
 
 		type: requestType[1]
 	},
+	//获取所有颜色
 	getValueList: {
 		fun: (req, res, next) => {
 			const { query } = req;
@@ -38,6 +40,7 @@ const themeTool = {
 		},
 		type: requestType[1]
 	},
+	//生成css文件
 	updataThemeValue: {
 		fun: (req, res, next) => {
 			const { platform, theme } = req.body;
@@ -79,6 +82,36 @@ const themeTool = {
 			});
 		},
 		type: requestType[2]
+	},
+	//查找值域
+	qureyColorField: {
+		fun(req, res, next) {
+			const { query } = req;
+			const SQL = themeToolSQL.qureyColorField(query);
+			conn.query(SQL, (err, data, flieds) => {
+				if (err) return next(new AppError(err));
+				return res.status(200).json({
+					code: '0',
+					data: data
+				});
+			});
+		},
+		type: requestType[1]
+	},
+	//查找值使用元素
+	getThemeInfoById: {
+		fun(req, res, next) {
+			const { query } = req;
+			const SQL = themeToolSQL.getThemeInfoById(query);
+			conn.query(SQL, (err, data, flieds) => {
+				if (err) return next(new AppError(err));
+				return res.status(200).json({
+					code: '0',
+					data: data
+				});
+			});
+		},
+		type: requestType[1]
 	},
 	getAppThemeInfo: {
 		fun(req, res, next) {

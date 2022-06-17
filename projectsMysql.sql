@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 15/06/2022 21:44:43
+ Date: 17/06/2022 18:36:12
 */
 
 SET NAMES utf8mb4;
@@ -78,20 +78,20 @@ CREATE TABLE `theme-tool-colorField` (
 -- Records of theme-tool-colorField
 -- ----------------------------
 BEGIN;
-INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (1, 'color-1', 'rgba(10, 10, 10, 0.8)');
+INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (1, 'color-1', '#0a0a0acc');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (2, 'color-2', '#a7a5a5');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (3, 'color-3', '#ff4d4f');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (4, 'color-4', '#52c41a');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (5, 'color-5', '#faad14');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (6, 'color-6', '#1890ff');
-INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (7, 'color-7', 'rgba(10, 10, 10, 1)');
-INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (8, 'image-1', '-webkit-linear-gradient(\n	right,\n	rgb(0, 255, 51),\n	#034f56,\n	rgb(248, 248, 245)\n)');
-INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (9, 'color-10', 'rgb(115, 124, 117)');
+INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (7, 'color-7', '#0a0a0a');
+INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (8, 'image-1', '-webkit-linear-gradient(\n	right,\n	#00ff33,\n	#034f56,\n	#f8f8f5\n)');
+INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (9, 'color-10', '#737c75');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (10, 'color-8', '#888888');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (11, 'color-9', '#04b373');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (12, 'color-11', '#242424');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (13, 'color-12', '#b0b0b0');
-INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (14, 'color-13', 'rgb(200,200,200)');
+INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (14, 'color-13', '#c8c8c8');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (15, 'color-14', '#5e5e5e');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (16, 'color-15', '#2d2d2d');
 INSERT INTO `theme-tool-colorField` (`id`, `name`, `value`) VALUES (17, 'color-16', '#404040');
@@ -197,7 +197,7 @@ CREATE TABLE `theme-tool-light` (
   `type` int NOT NULL,
   `editor` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of theme-tool-light
@@ -234,7 +234,7 @@ INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (29, 'table', 'body', 'TrTd', NULL, 'border-color', '12', 0, 0);
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (30, 'table', 'body', 'TrTd', 'hover', 'background', '20', 0, 0);
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (31, 'table', 'head', 'TrTh', '', 'color', '10', 0, 0);
-INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (32, 'table', 'head', 'TrTh', NULL, 'background-color', '17', 0, 0);
+INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (32, 'table', 'head', 'TrTh', NULL, 'background', '17', 0, 0);
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (33, 'table', 'head', 'TrTh', NULL, 'border-color', '12', 0, 0);
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (34, 'table', 'pagenation', NULL, NULL, 'color', '10', 0, 0);
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (35, 'table', 'pagenation', NULL, NULL, 'border-color', '12', 0, 0);
@@ -271,6 +271,12 @@ INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (66, 'scrollbar', 'track', NULL, NULL, 'background', '18', 0, 0);
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (67, 'app', 'searchTable', 'splitLine', NULL, 'color', '13', 1, 0);
 INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (68, 'table', 'tbody', 'placeholder', 'hover', 'background-color', '17', 0, 0);
+INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (69, 'modal', NULL, NULL, NULL, 'color', '13', 0, 0);
+INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (70, 'modal', 'content', NULL, NULL, 'background-color', '18', 0, 0);
+INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (71, 'modal', 'close', NULL, NULL, 'color', '13', 0, 0);
+INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (72, 'modal', 'head', NULL, NULL, 'background', '17', 0, 0);
+INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (73, 'modal', 'head', NULL, NULL, 'color', '13', 0, 0);
+INSERT INTO `theme-tool-light` (`id`, `component`, `group`, `position`, `status`, `attribute`, `value`, `type`, `editor`) VALUES (74, 'modal', 'title', NULL, NULL, 'color', '13', 0, 0);
 COMMIT;
 
 -- ----------------------------
@@ -292,7 +298,7 @@ CREATE TABLE `userInfo` (
 -- Records of userInfo
 -- ----------------------------
 BEGIN;
-INSERT INTO `userInfo` (`id`, `userName`, `password`, `cookie`, `endTime`, `theme`, `routes`) VALUES (1, 'admin', 'admin', '1655291391330106239285', '1655304125207', 1, '1,2,3,4,5,6');
+INSERT INTO `userInfo` (`id`, `userName`, `password`, `cookie`, `endTime`, `theme`, `routes`) VALUES (1, 'admin', 'admin', '1655454614695810739892', '1655465727535', 1, '1,2,3,4,5,6');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

@@ -30,7 +30,7 @@
             --table-body-TrTd-border-color:var(--color-11);
             --table-body-TrTd-hover-background:var(--color-18);
             --table-head-TrTh-color:var(--color-8);
-            --table-head-TrTh-background-color:var(--color-16);
+            --table-head-TrTh-background:var(--color-16);
             --table-head-TrTh-border-color:var(--color-11);
             --table-pagenation-color:var(--color-8);
             --table-pagenation-border-color:var(--color-11);
@@ -67,4 +67,10 @@
             --scrollbar-track-background:var(--color-17);
             --app-searchTable-splitLine-color:var(--color-12);
             --table-tbody-placeholder-hover-background-color:var(--color-16);
+            --modal-color:var(--color-12);
+            --modal-content-background-color:var(--color-17);
+            --modal-close-color:var(--color-12);
+            --modal-head-background:var(--color-16);
+            --modal-head-color:var(--color-12);
+            --modal-title-color:var(--color-12);
 }
