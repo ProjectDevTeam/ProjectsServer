@@ -99,6 +99,21 @@ const themeTool = {
 		type: requestType[1]
 	},
 	//查找值使用元素
+	qureyThemeInfo: {
+		fun(req, res, next) {
+			const { query } = req;
+			const SQL = themeToolSQL.qureyThemeInfo(query);
+			conn.query(SQL, (err, data, flieds) => {
+				if (err) return next(new AppError(err));
+				return res.status(200).json({
+					code: '0',
+					data: data
+				});
+			});
+		},
+		type: requestType[1]
+	},
+	//ID查找值使用元素
 	getThemeInfoById: {
 		fun(req, res, next) {
 			const { query } = req;
@@ -126,6 +141,20 @@ const themeTool = {
 			});
 		},
 		type: requestType[1]
+	},
+	updateColorField: {
+		fun(req, res, next) {
+			const { id, color, usedIdLists, swapInfo } = req.body;
+			const SQL = themeToolSQL.updateColorField({ id, color, usedIdLists, swapInfo });
+			conn.query(SQL, (err, data, flieds) => {
+				if (err) return next(new AppError(err));
+				return res.status(200).json({
+					code: '0',
+					data: 'success'
+				});
+			});
+		},
+		type: requestType[2]
 	}
 };
 module.exports = themeTool;

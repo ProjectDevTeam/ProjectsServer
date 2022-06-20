@@ -73,4 +73,19 @@
             --modal-head-background:var(--color-16);
             --modal-head-color:var(--color-12);
             --modal-title-color:var(--color-12);
+            --select-selector-background-color:var(--color-17);
+            --select-selector-border-color:var(--color-18);
+            --select-selector-focus-border-color:var(--color-11);
+            --select-selector-focus-box-shadow:var(--color-20);
+            --select-selector-hover-background-color:var(--color-18);
+            --select-selector-hover-border-color:var(--color-11);
+            --select-selector-color:var(--color-8);
+            --select-selector-item-background-color:var(--color-16);
+            --select-selector-item-border-color:var(--color-11);
+            --select-selector-item-close-color:var(--color-2);
+            --select-dropdown-background-color:var(--color-17);
+            --select-dropdown-border-color:var(--color-18);
+            --select-dropdown-item-active-background-color:var(--color-9);
+            --select-dropdown-item-hover-background-color:var(--color-11);
+            --select-dropdown-item-color:var(--color-8);
 }

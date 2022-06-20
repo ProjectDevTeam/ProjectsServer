@@ -1,7 +1,8 @@
 const mysql = require('mysql');
 const connInfo = require('./dbconfig');
 const conn = mysql.createConnection({
-	...connInfo
+	...connInfo,
+	multipleStatements: true
 });
 conn.connect();
 
