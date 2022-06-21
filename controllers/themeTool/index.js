@@ -142,6 +142,7 @@ const themeTool = {
 		},
 		type: requestType[1]
 	},
+	//更新colorField
 	updateColorField: {
 		fun(req, res, next) {
 			const { id, color, usedIdLists, swapInfo } = req.body;
@@ -155,6 +156,41 @@ const themeTool = {
 			});
 		},
 		type: requestType[2]
+	},
+	addColorFiled: {
+		fun(req, res, next) {
+			const { name, color } = req.query;
+			if (!name || !color) {
+				return res.status(200).json({
+					code: '300',
+					data: 'name and color is required'
+				});
+			} else {
+				const SQL = themeToolSQL.addColorFiled({ name, color });
+				conn.query(SQL, (err, data, flieds) => {
+					if (err) return next(new AppError(err));
+					return res.status(200).json({
+						code: '0',
+						data: 'success'
+					});
+				});
+			}
+		},
+		type: requestType[1]
+	},
+	deleteColorFiled: {
+		fun(req, res, next) {
+			const { id } = req.query;
+			const SQL = themeToolSQL.deleteColorFiled(id);
+			conn.query(SQL, (err, data, flieds) => {
+				if (err) return next(new AppError(err));
+				return res.status(200).json({
+					code: '0',
+					data: 'success'
+				});
+			});
+		},
+		type: requestType[1]
 	}
 };
 module.exports = themeTool;

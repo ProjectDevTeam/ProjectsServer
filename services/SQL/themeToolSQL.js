@@ -52,6 +52,12 @@ const themeToolSQL = {
 			swapInfoSQL += `UPDATE \`theme-tool-light\` SET \`value\`='${swapInfo[item].to}' where \`id\`='${item}';`;
 		});
 		return updateColorFiledsSQL + userIdListsSQL + swapInfoSQL;
+	},
+	addColorFiled({ name, color }) {
+		return `INSERT INTO \`theme-tool-colorField\` (\`name\`, \`value\`) VALUES ('${name}', '${color}');`;
+	},
+	deleteColorFiled(id) {
+		return `DELETE FROM \`theme-tool-colorField\` WHERE \`id\`=${id}`;
 	}
 };
 

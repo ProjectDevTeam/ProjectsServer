@@ -48,7 +48,7 @@
             --table-pagenation-item-active-background:var(--color-18);
             --table-pagenation-item-active-border-color:var(--color-11);
             --table-pagenation-item-active-color:var(--color-19);
-            --input-background:var(--color-17);
+            --input-background-color:var(--color-17);
             --input-color:var(--color-8);
             --input-border:var(--color-18);
             --input-focus-border-color:var(--color-11);
@@ -77,8 +77,6 @@
             --select-selector-border-color:var(--color-18);
             --select-selector-focus-border-color:var(--color-11);
             --select-selector-focus-box-shadow:var(--color-20);
-            --select-selector-hover-background-color:var(--color-18);
-            --select-selector-hover-border-color:var(--color-11);
             --select-selector-color:var(--color-8);
             --select-selector-item-background-color:var(--color-16);
             --select-selector-item-border-color:var(--color-11);
@@ -88,4 +86,10 @@
             --select-dropdown-item-active-background-color:var(--color-9);
             --select-dropdown-item-hover-background-color:var(--color-11);
             --select-dropdown-item-color:var(--color-8);
+            --select-dropdown-item-state-active-color:var(--color-8);
+            --select-selector-clear-background:var(--color-22);
+            --select-selector-clear-color:var(--color-8);
+            --input-error-background-color:var(--color-17);
+            --input-error-border-color:var(--color-3);
+            --input-error-box-shadow:var(--color-23);
 }
