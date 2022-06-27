@@ -24,7 +24,7 @@
 .animation .jt {
   background: center / contain no-repeat url(/build/assets/images/8a4d5ff694cdaa329064.png);
   -webkit-animation: jtanmition 10s infinite linear;
-          animation: jtanmition 10s infinite linear;
+  animation: jtanmition 10s infinite linear;
 }
 .animation .lbx {
   width: 80%;
@@ -32,7 +32,7 @@
   background: center / contain no-repeat url(/build/assets/images/82742f790e86eb268d5e.png);
   opacity: 0.7;
   -webkit-animation: lxbanmition 15s infinite linear;
-          animation: lxbanmition 15s infinite linear;
+  animation: lxbanmition 15s infinite linear;
 }
 @-webkit-keyframes jtanmition {
   0% {
@@ -126,4 +126,3 @@ body#auth-center {
   background-color: var(--app-background-color);
   color: var(--app-color);
 }
-

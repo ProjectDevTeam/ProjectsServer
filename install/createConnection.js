@@ -1,5 +1,5 @@
-const mysql = require('mysql');
+const mysql = require('mysql')
 
-const db = mysql.createConnection;
+const db = mysql.createConnection
 
-module.exports = db;
+module.exports = db

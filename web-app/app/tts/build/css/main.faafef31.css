@@ -43,9 +43,9 @@
   -webkit-text-fill-color: transparent;
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nav-item {
@@ -54,9 +54,9 @@
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   width: auto;
   text-align: center;
   padding: 0 10px;
@@ -173,4 +173,3 @@ body {
 .ant-input-group-wrapper.wly-input .ant-input-group .ant-input-group-addon {
   line-height: 10px;
 }
-

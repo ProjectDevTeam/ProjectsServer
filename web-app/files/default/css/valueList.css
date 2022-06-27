@@ -1,31 +1,26 @@
-:root{
-        --color-1:#0a0a0acc;
-        --color-2:#a7a5a5;
-        --color-3:#ff4d4f;
-        --color-4:#52c41a;
-        --color-5:#faad14;
-        --color-6:#1890ff;
-        --color-7:#0a0a0a;
-        --image-1:-webkit-linear-gradient(
-	right,
-	#00ff33,
-	#034f56,
-	#f8f8f5
-);
-        --color-10:#737c75;
-        --color-8:#888888;
-        --color-9:#04b373;
-        --color-11:#242424;
-        --color-12:#b0b0b0;
-        --color-13:#c8c8c8;
-        --color-14:#5e5e5e;
-        --color-15:#2d2d2d;
-        --color-16:#404040;
-        --color-17:#2f2f2f;
-        --color-20:#4e4e4e;
-        --color-18:#3b3b3b;
-        --color-19:#d9d9d9;
-        --color-21:#585858;
-        --color-22:#00000000;
-        --color-23:#ff4d4f33;
+:root {
+  --color-1: #0a0a0acc;
+  --color-2: #a7a5a5;
+  --color-3: #ff4d4f;
+  --color-4: #52c41a;
+  --color-5: #faad14;
+  --color-6: #1890ff;
+  --color-7: #0a0a0a;
+  --image-1: -webkit-linear-gradient(right, #00ff33, #034f56, #f8f8f5);
+  --color-10: #737c75;
+  --color-8: #888888;
+  --color-9: #04b373;
+  --color-11: #242424;
+  --color-12: #b0b0b0;
+  --color-13: #c8c8c8;
+  --color-14: #5e5e5e;
+  --color-15: #2d2d2d;
+  --color-16: #404040;
+  --color-17: #2f2f2f;
+  --color-20: #4e4e4e;
+  --color-18: #3b3b3b;
+  --color-19: #d9d9d9;
+  --color-21: #585858;
+  --color-22: #00000000;
+  --color-23: #ff4d4f33;
 }
